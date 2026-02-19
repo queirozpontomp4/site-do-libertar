@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+body{
+    background-color: #ededed;
+}
+
+/* HEADER */
+header {
     height: 90px;
     background-color: #222222;
     padding: 20px 40px;
@@ -15,48 +20,68 @@ header{
     font-family: 'Montserrat', sans-serif;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
     gap: 40px;
     align-items: center;
 }
 
-a{
+.header-nav a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
+    transition: 0.5s;
 }
 
-main{
+.header-nav a:hover{
+    color: #DD9F2D;
+    border-bottom: 2px solid #DD9F2D;
+}
+
+/* MAIN */
+main {
     margin: 20px 0;
 }
 
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 /* INTRODUÇÃO */
-.introducao{
+.introducao {
+    padding: 40px 0;
+    position: relative;
+}
+
+.introducao .container {
     display: flex;
-    height: 50.5vh;
 }
 
-.introducao div:first-child{
-    width: 60%;
+.intro-textos {
+    flex: 1;
 }
 
-.intro-textos h1{
+.intro-img {
+    flex: 1;
+}
+
+.intro-textos h1 {
     font-family: "Dela Gothic One", sans-serif;
     font-size: 60px;
     margin: 0 60px;
 }
 
-.intro-textos h3{
-     font-family: "Belanosima", sans-serif;
-     font-size: 30px;
-     font-weight: 500;
-     color: #222222;
-     margin: 0 60px;
+.intro-textos h3 {
+    font-family: "Belanosima", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #222222;
+    margin: 0 60px;
 }
 
-.intro-textos p{
+.intro-textos p {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin: 20px 0 40px 60px;
@@ -64,11 +89,11 @@ main{
     color: #222222;
 }
 
-.intro-textos p span{
+.intro-textos p span {
     color: #BE2525;
 }
 
-.intro-textos #intro-btn{
+.intro-textos #intro-btn {
     background-color: #5A8613;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -77,34 +102,287 @@ main{
     font-weight: 600;
     font-size: 18px;
     margin: 0 60px;
+    transition: 0.2s;
+    text-decoration: none;
 }
 
-.introducao div:last-child{
-    width: 40%;
+#intro-btn:hover{
+    background-color: #73a02b;
+    -webkit-box-shadow: 0px 0px 14px -5px #73a02b; 
+box-shadow: 0px 0px 14px -5px #73a02b;
 }
 
-.introducao .intro-img img{
+.intro-img {
+    overflow: hidden;
+}
+
+.introducao .intro-img img {
     height: auto;
-    width: 506px;
-    object-fit: contain;
+    max-width: 550px;
+    bottom: 0;
+    position: absolute;
 }
 
 /* DESCRIÇÃO DO LIBERTAR */
-.descricao-libertar{
+.descricao-libertar {
     background-color: #222222;
-    height: 30vh;
-    padding: 20px 60px;
+    padding: 40px 60px;
     text-align: center;
 }
 
-.descricao-libertar h1{
+.descricao-libertar h1 {
     font-family: "Dela Gothic One", sans-serif;
     font-size: 36px;
     color: white;
     margin-bottom: 20px;
 }
 
-.descricao-libertar p{
+.descricao-libertar p {
     color: white;
     font-family: 'Poppins', sans-serif;
+}
+
+/* CARROSSEL DE CURSOS */
+.cursos {
+    display: flex;
+    align-items: stretch;
+    padding: 40px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+#container-curso{
+    display: flex;
+}
+
+.cursos-texto {
+    width: 30%;
+    position: relative;
+    z-index: 2;
+    padding: 0 60px;
+}
+
+.cursos-texto h1 {
+    color: #222222;
+    letter-spacing: 5px;
+    border-bottom: 3px solid #222222;
+    padding: 0 0 10px 0;
+}
+
+.cursos-texto p {
+    color: #222222;
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.carrossel-area {
+    width: 70%;
+    position: relative;
+}
+
+.carrossel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrossel-track {
+    display: flex;
+    gap: 20px;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.carrossel-card {
+    min-width: 300px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    border-bottom: 12px solid #222222;
+}
+
+.carrossel-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.carrossel-card p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.carrossel-card a {
+    background-color: #ededed;
+    padding: 8px 60px;
+    font-size: 13px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 13px -4px #ffffff79;
+    box-shadow: 0px 0px 13px -4px #ffffffa4;
+    text-decoration: none;
+}
+
+.seta {
+    position: absolute;
+    background: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    right: 0;
+    top: 40%;
+}
+
+/* PÚBLICO ATENDIDO */
+.publico-atendido {
+    background-color: #222222;
+    padding: 40px 60px;
+}
+
+.publico-h1{
+    margin-bottom: 80px;
+}
+
+.publico-h1 h1 {
+    color: #fff;
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card-publico {
+    min-width: 200px;
+    padding: 80px 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.card-publico:hover{
+    transform: translateY(-20px);
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,1); 
+box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
+}
+
+.card-img{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-img img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #222222;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card-publico h3 {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.card-publico p {
+    color: #fff;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* MISSÃO, DOE E SE ENVOLVA */
+.missao-doe-envolva{
+    padding: 40px 60px;
+}
+
+.bloco{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.bloco-img img{
+    height: 150px;
+    width: 150px;
+}
+
+.bloco-texto h2{
+    color: #222222;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+.bloco-texto p{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer{
+    background-color: #222222;
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+    font-family: "Montserrat", sans-serif;
+    justify-content: space-between;
+}
+
+.footer-logo{
+    color: white;
+    font-size: 11px;
+    color: #8f8f8f;
+    max-width: 350px;
+}
+
+.footer-logo img{
+    height: 50px;
+}
+
+.footer-logo span{
+    color: #DD9F2D;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-nav h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-nav p, .footer-nav a, #icon-whatsapp{
+    color: #b6b5b5;
+    font-size: 12px;
+}
+
+.footer-nav i{
+    font-size: 25px;
+    color: #b6b5b5;
+    transition: 0.3s;
+}
+
+.footer-nav i:hover{
+    color: #DD9F2D;
+    transform: scale(1.1);
 }
