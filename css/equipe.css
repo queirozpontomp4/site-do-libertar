@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #ededed;
 }
 
@@ -34,7 +34,146 @@ header {
     transition: 0.5s;
 }
 
-.header-nav a:hover{
+.header-nav a:hover {
     color: #DD9F2D;
     border-bottom: 2px solid #DD9F2D;
 }
+
+#active {
+    color: #FFB52B;
+}
+
+/* FIM DO HEADER */
+
+/* MAIN */
+main {
+    margin: 20px 0 0 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* FIM DO MAIN */
+
+/* CARROSSEL DA COODERNAÇÃO */
+.coordenacao{
+    padding: 40px 60px;
+}
+
+.carrossel {
+    position: relative;
+}
+
+.carrossel-viewport {
+    overflow: hidden;
+    margin: 30px;
+}
+
+.coordenacao-texto h1{
+    font-family: "Dela Gothic One", sans-serif;
+    color: #222222;
+    text-align: center;
+    font-weight: 400;
+    padding: 0 0 40px;
+}
+
+.coordenacao-texto span{
+    color: #BE2525;
+}
+
+.carrossel-track {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-card{
+    background-color: #222222;
+    min-width: 300px;
+    padding: 80px 20px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    border-bottom: 10px solid #BE2525;
+}
+
+.carrossel-card h3{
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 5px;
+}
+
+.carrossel-card h6{
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #FF4242;
+}
+
+.carrossel-card p{
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-redes-sociais{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.carrossel-card i{
+    color: #ffffff;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.carrossel-card i:hover{
+    color: #FF4242;
+    font-size: 25px;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #222222;
+    color: white;
+    border: none;
+    padding: 15px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+/* FIM DO CARROSSEL DA COODERNAÇÃO */
+
+/* CARROSSEL DOS PROFESSORES */
+.professores{
+    padding: 40px 60px;
+}
+.professores-texto{
+    font-family: "Dela Gothic One", sans-serif;
+    color: #222222;
+    text-align: center;
+    font-weight: 400;
+    padding: 0 0 40px;
+}
+
+.professores-texto span{
+    color: #5A8613;
+}
+
+/* FIM DO CARROSSEL DOS PROFESSORES */
