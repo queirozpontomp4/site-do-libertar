@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #ededed;
 }
 
@@ -34,7 +34,282 @@ header {
     transition: 0.5s;
 }
 
-.header-nav a:hover{
+.header-nav a:hover {
     color: #DD9F2D;
     border-bottom: 2px solid #DD9F2D;
 }
+
+
+#active {
+    color: #FF4242;
+}
+
+/* FIM DO HEADER */
+
+/* MAIN */
+main {
+    margin: 20px 0 0 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* FIM DO MAIN */
+
+/* PROJETO PRÉ-VESTIBULAR */
+.pre-vestibular-container {
+    display: flex;
+    padding: 40px 0;
+    position: relative;
+}
+
+.pre-vestibular-textos {
+    padding: 0 60px;
+}
+
+.pre-vestibular-textos h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #D82828;
+    margin-bottom: 20px;
+}
+
+.pre-vestibular-textos p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.pre-vestibular-img img {
+    max-width: 400px;
+    height: auto;
+    position: static;
+    border-radius: 20px;
+    object-fit: contain;
+    margin: 0 40px 0 0;
+    border: 5px solid #D82828;
+}
+
+.quadrado-vermelho {
+    background-color: #D82828;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px 0 0 20px;
+    margin: 50px 0;
+}
+/* FIM DO PROJETO PRÉ-VESTIBULAR */
+
+/* PROJETO E CIDADANIA */
+.cidadania-container {
+    display: flex;
+    padding: 40px 0;
+    position: relative;
+}
+
+.cidadania-textos {
+    padding: 0 60px;
+}
+
+.cidadania-textos h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #DD9F2D;
+    margin-bottom: 20px;
+}
+
+.cidadania-textos p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.cidadania-img img {
+    max-width: 400px;
+    height: auto;
+    position: static;
+    border-radius: 20px;
+    object-fit: contain;
+    margin: 0 0 0 40px;
+    border: 5px solid #DD9F2D;
+}
+
+.quadrado-amarelo {
+    background-color: #DD9F2D;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 20px 20px 0;
+    margin: 50px 0;
+}
+/* FIM DO PROJETO CIDADANIA */
+
+/* PROJETO ESPORTESR */
+.esportes-container {
+    display: flex;
+    padding: 40px 0;
+    position: relative;
+}
+
+.esportes-textos {
+    padding: 0 60px;
+}
+
+.esportes-textos h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #5A8613;
+    margin-bottom: 20px;
+}
+
+.esportes-textos p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.esportes-img img {
+    max-width: 400px;
+    height: auto;
+    position: static;
+    border-radius: 20px;
+    object-fit: contain;
+    margin: 0 40px 0 0;
+    border: 5px solid #5A8613;
+}
+
+.quadrado-verde {
+    background-color: #5A8613;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px 0 0 20px;
+    margin: 50px 0;
+}
+
+/* FIM DO PROJETO ESPORTES */
+
+/* CURSOS COM CERTIFICADO */
+.cursos {
+    background-color: #222222;
+    padding: 40px 60px;
+}
+
+.cursos h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    color: #ededed;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cursos-cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    min-height: 200px;
+    width: 300px;
+    background-color: #ededed;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 19px -6px rgba(255, 255, 255, 0.64);
+    box-shadow: 0px 3px 19px -6px rgba(255, 255, 255, 0.64);
+    transition: 0.3s;
+    position: relative;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 3px;
+    background: linear-gradient(90deg, #FF4242, #DD9F2D, #5A8613);
+    clip-path: inset(97% 0 0 0);
+}
+
+.card:hover {
+    -webkit-box-shadow: 0px 3px 19px -4px rgba(255, 255, 255, 0.73);
+    box-shadow: 0px 3px 19px -4px rgba(255, 255, 255, 0.73);
+}
+
+.card h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+/* FIM DO CURSOS COM CERTIFICADO */
+
+/* FOOTER */
+footer{
+    background-color: #222222;
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+    font-family: "Montserrat", sans-serif;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.82); 
+box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.82);
+}
+
+.footer-logo{
+    color: white;
+    font-size: 11px;
+    color: #8f8f8f;
+    max-width: 350px;
+}
+
+.footer-logo img{
+    height: 50px;
+}
+
+.footer-logo span{
+    color: #DD9F2D;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-nav h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-nav p, .footer-nav a, #icon-whatsapp{
+    color: #b6b5b5;
+    font-size: 12px;
+}
+
+.footer-nav i{
+    font-size: 25px;
+    color: #b6b5b5;
+    transition: 0.3s;
+}
+
+.footer-nav i:hover{
+    color: #DD9F2D;
+    transform: scale(1.1);
+}
+/* FIM DO FOOTER */
