@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #ededed;
 }
 
@@ -34,10 +34,11 @@ header {
     transition: 0.5s;
 }
 
-.header-nav a:hover{
+.header-nav a:hover {
     color: #DD9F2D;
     border-bottom: 2px solid #DD9F2D;
 }
+
 /* FIM DO HEADER */
 
 /* MAIN */
@@ -49,6 +50,7 @@ main {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 /* FIM DO MAIN */
 
 /* INTRODUÇÃO */
@@ -67,6 +69,7 @@ main {
 
 .intro-img {
     flex: 1;
+    overflow: hidden;
 }
 
 .intro-textos h1 {
@@ -108,22 +111,19 @@ main {
     text-decoration: none;
 }
 
-#intro-btn:hover{
+#intro-btn:hover {
     background-color: #73a02b;
-    -webkit-box-shadow: 0px 0px 14px -5px #73a02b; 
-box-shadow: 0px 0px 14px -5px #73a02b;
-}
-
-.intro-img {
-    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 14px -5px #73a02b;
+    box-shadow: 0px 0px 14px -5px #73a02b;
 }
 
 .introducao .intro-img img {
     height: auto;
-    max-width: 550px;
-    bottom: 0;
     position: absolute;
+    bottom: 0;
+    max-width: 550px;
 }
+
 /* FIM DA INTRODUÇÃO */
 
 /* DESCRIÇÃO DO LIBERTAR */
@@ -144,6 +144,7 @@ box-shadow: 0px 0px 14px -5px #73a02b;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
+
 /* FIM DA DESCRIÇÃO */
 
 /* CARROSSEL DE CURSOS */
@@ -154,7 +155,7 @@ box-shadow: 0px 0px 14px -5px #73a02b;
     font-family: "Montserrat", sans-serif;
 }
 
-#container-curso{
+#container-curso {
     display: flex;
 }
 
@@ -238,6 +239,7 @@ box-shadow: 0px 0px 14px -5px #73a02b;
     right: 0;
     top: 40%;
 }
+
 /* FIM DO CARROSSEL DOS CURSOS */
 
 /* PÚBLICO ATENDIDO */
@@ -246,7 +248,7 @@ box-shadow: 0px 0px 14px -5px #73a02b;
     padding: 40px 60px;
 }
 
-.publico-h1{
+.publico-h1 {
     margin-bottom: 80px;
 }
 
@@ -273,26 +275,26 @@ box-shadow: 0px 0px 14px -5px #73a02b;
     position: relative;
 }
 
-.card-publico:hover{
+.card-publico:hover {
     transform: translateY(-20px);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,1); 
-box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 1);
 }
 
-.card-img{
+.card-img {
     position: absolute;
     top: -60px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.card-img img{
+.card-img img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #222222;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-publico h3 {
@@ -308,40 +310,42 @@ box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
     font-size: 13px;
     font-family: "Poppins", sans-serif;
 }
+
 /* FIM DO PÚBLICO ATENDIDO */
 
 /* MISSÃO, DOE E SE ENVOLVA */
-.missao-doe-envolva{
+.missao-doe-envolva {
     padding: 40px 60px;
 }
 
-.bloco{
+.bloco {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.bloco-img img{
+.bloco-img img {
     height: 150px;
     width: 150px;
 }
 
-.bloco-texto h2{
+.bloco-texto h2 {
     color: #222222;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 8px;
     margin-bottom: 10px;
 }
 
-.bloco-texto p{
+.bloco-texto p {
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-weight: 500;
 }
+
 /* FIM DA MISSÃO, DOE E SE ENVOLVA */
 
 /* FOOTER */
-footer{
+footer {
     background-color: #222222;
     display: flex;
     gap: 20px;
@@ -350,47 +354,50 @@ footer{
     justify-content: space-between;
 }
 
-.footer-logo{
+.footer-logo {
     color: white;
     font-size: 11px;
     color: #8f8f8f;
     max-width: 350px;
 }
 
-.footer-logo img{
+.footer-logo img {
     height: 50px;
 }
 
-.footer-logo span{
+.footer-logo span {
     color: #DD9F2D;
 }
 
-.footer-nav{
+.footer-nav {
     display: flex;
     gap: 40px;
     color: #fff;
     text-align: center;
 }
 
-.footer-nav h3{
+.footer-nav h3 {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.footer-nav p, .footer-nav a, #icon-whatsapp{
+.footer-nav p,
+.footer-nav a,
+#icon-whatsapp {
     color: #b6b5b5;
     font-size: 12px;
 }
 
-.footer-nav i{
+.footer-nav i {
     font-size: 25px;
     color: #b6b5b5;
     transition: 0.3s;
 }
 
-.footer-nav i:hover{
+.footer-nav i:hover {
     color: #DD9F2D;
     transform: scale(1.1);
 }
+
 /* FIM DO FOOTER */

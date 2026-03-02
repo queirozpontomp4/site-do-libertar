@@ -38,3 +38,187 @@ header {
     color: #DD9F2D;
     border-bottom: 2px solid #DD9F2D;
 }
+
+#active {
+    color: #FFB52B;
+}
+
+/* FIM DO HEADER */
+
+/* MAIN */
+main {
+    margin: 20px 0 0 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+/* FIM DO MAIN */
+
+/* INÍCIO DOS RESULTADOS */
+.resultados-container{
+    padding: 40px 0;
+    display: flex;
+}
+
+.resultados-texto{
+    padding: 0 60px;
+}
+
+.resultados-texto span{
+    color: #D82828;
+    font-weight: 700;
+}
+
+.resultados-texto h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #D82828;
+    margin-bottom: 20px;
+    text-align: end;
+    border-right: 6px solid #D82828;
+    padding-right: 20px;
+}
+
+.resultados-texto p {
+   font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+    text-align: end;
+}
+
+.quadrado-vermelho{
+    background-color: #D82828;
+    width: 300px;
+    height: 400px;
+    max-width: 400px;
+}
+/* FIM DOS RESULTADOS */
+
+/* INÍCIO DA DOAÇÃO */
+.doacao-container{
+    padding: 40px 0;
+    display: flex;
+}
+
+.doacao-texto{
+    padding: 0 60px;
+}
+
+.doacao-texto h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #5A8613;
+    margin-bottom: 20px;
+    border-left: 6px solid #5A8613;
+    padding-left: 20px;
+}
+
+.doacao-texto p {
+   font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.doacao-texto span{
+    color: #5A8613;
+    font-weight: 700;
+}
+
+.quadrado-verde{
+    background-color: #5A8613;
+    width: 350px;
+    height: 450px;
+    max-width: 400px;
+}
+
+.botao-doe{
+    margin-top: 20px;
+}
+
+.btn-pix{
+    background-color: transparent;
+    border: 2px solid #5A8613;
+    color: #5A8613;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-pix:hover{
+    background-color: #5A8613;
+    color: #ffffff;
+}
+/* FIM DA DOAÇÃO */
+
+/* INÍCIO VÍDEO LIBERTAR */
+.video-libertar{
+    background-color: #222222;
+    padding: 40px 60px;
+    display: flex;
+}
+/* FIM VÍDEO LIBERTAR */
+
+/* FOOTER */
+footer{
+    background-color: #222222;
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+    font-family: "Montserrat", sans-serif;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.42); 
+box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.42);
+}
+
+.footer-logo{
+    color: white;
+    font-size: 11px;
+    color: #8f8f8f;
+    max-width: 350px;
+}
+
+.footer-logo img{
+    height: 50px;
+}
+
+.footer-logo span{
+    color: #DD9F2D;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-nav h3{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-nav p, .footer-nav a, #icon-whatsapp{
+    color: #b6b5b5;
+    font-size: 12px;
+}
+
+.footer-nav i{
+    font-size: 25px;
+    color: #b6b5b5;
+    transition: 0.3s;
+}
+
+.footer-nav i:hover{
+    color: #DD9F2D;
+    transform: scale(1.1);
+}
+/* FIM DO FOOTER */

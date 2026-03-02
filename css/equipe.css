@@ -45,7 +45,7 @@ header {
 
 /* FIM DO HEADER */
 
-/* MAIN */
+/* MAIN E BANNER */
 main {
     margin: 20px 0 0 0;
 }
@@ -55,7 +55,19 @@ main {
     margin: 0 auto;
 }
 
-/* FIM DO MAIN */
+.banner {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* FIM DO MAIN E BANNER*/
 
 /* CARROSSEL DA COODERNAÇÃO */
 .coordenacao {
@@ -207,3 +219,61 @@ main {
 }
 
 /* FIM DO CARROSSEL DOS DESENVOLVEDORES */
+
+/* FOOTER */
+footer {
+    background-color: #222222;
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+    font-family: "Montserrat", sans-serif;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 11px;
+    color: #8f8f8f;
+    max-width: 350px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-logo span {
+    color: #DD9F2D;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-nav h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-nav p,
+.footer-nav a,
+#icon-whatsapp {
+    color: #b6b5b5;
+    font-size: 12px;
+}
+
+.footer-nav i {
+    font-size: 25px;
+    color: #b6b5b5;
+    transition: 0.3s;
+}
+
+.footer-nav i:hover {
+    color: #DD9F2D;
+    transform: scale(1.1);
+}
+
+/* FIM DO FOOTER */
