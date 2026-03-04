@@ -43,7 +43,7 @@ header {
 
 /* MAIN */
 main {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 .container {
@@ -55,8 +55,7 @@ main {
 
 /* INTRODUÇÃO */
 .introducao {
-    padding: 40px 0;
-    position: relative;
+    padding: 40px 0 0 0;
 }
 
 .introducao .container {
@@ -65,17 +64,19 @@ main {
 
 .intro-textos {
     flex: 1;
+    padding: 0 0 40px 0;
 }
 
 .intro-img {
     flex: 1;
-    overflow: hidden;
+    position: relative;
 }
 
 .intro-textos h1 {
     font-family: "Dela Gothic One", sans-serif;
     font-size: 60px;
     margin: 0 60px;
+    font-weight: 400;
 }
 
 .intro-textos h3 {
@@ -99,29 +100,32 @@ main {
 }
 
 .intro-textos #intro-btn {
-    background-color: #5A8613;
-    color: white;
+    background-color: transparent;
+    border: 2px solid #5A8613;
+    color: #5A8613;
     font-family: 'Montserrat', sans-serif;
     padding: 10px 80px;
     border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
     margin: 0 60px;
     transition: 0.2s;
     text-decoration: none;
 }
 
 #intro-btn:hover {
-    background-color: #73a02b;
+    background-color: #5A8613;
+    color: white;
     -webkit-box-shadow: 0px 0px 14px -5px #73a02b;
     box-shadow: 0px 0px 14px -5px #73a02b;
 }
 
 .introducao .intro-img img {
     height: auto;
-    position: absolute;
+    position: static;
     bottom: 0;
     max-width: 550px;
+    right: 1;
 }
 
 /* FIM DA INTRODUÇÃO */
@@ -138,6 +142,7 @@ main {
     font-size: 36px;
     color: white;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .descricao-libertar p {
@@ -153,17 +158,19 @@ main {
     align-items: stretch;
     padding: 40px 0;
     font-family: "Montserrat", sans-serif;
+    width: 100%;
 }
 
 #container-curso {
     display: flex;
+    width: 100%;
 }
 
 .cursos-texto {
     width: 30%;
     position: relative;
     z-index: 2;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 
 .cursos-texto h1 {
@@ -203,7 +210,18 @@ main {
     border-radius: 15px;
     color: white;
     text-align: center;
-    border-bottom: 12px solid #222222;
+    background-color: #222222;
+    position: relative;
+}
+
+.carrossel-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 3px;
+    background: linear-gradient(90deg, #FF4242, #DD9F2D, #5A8613);
+    clip-path: inset(95% 0 0 0);
 }
 
 .carrossel-card h3 {
@@ -242,162 +260,405 @@ main {
 
 /* FIM DO CARROSSEL DOS CURSOS */
 
-/* PÚBLICO ATENDIDO */
-.publico-atendido {
+/* INÍCIO DO SOBRE OS PROJETOS */
+.sobre-projetos {
     background-color: #222222;
     padding: 40px 60px;
 }
 
-.publico-h1 {
-    margin-bottom: 80px;
-}
-
-.publico-h1 h1 {
-    color: #fff;
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
-}
-
-.card-container {
-    display: flex;
-    gap: 20px;
-}
-
-.card-publico {
-    min-width: 200px;
-    padding: 80px 20px 40px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.5s;
-    position: relative;
-}
-
-.card-publico:hover {
-    transform: translateY(-20px);
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 1);
-    box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 1);
-}
-
-.card-img {
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.card-img img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #222222;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.card-publico h3 {
-    color: #fff;
-    font-size: 18px;
+.sobre-projetos h1 {
+    color: #ffffff;
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 20px;
-    font-weight: 600;
+    letter-spacing: 7px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
 }
 
-.card-publico p {
-    color: #fff;
-    font-size: 13px;
-    font-family: "Poppins", sans-serif;
-}
-
-/* FIM DO PÚBLICO ATENDIDO */
-
-/* MISSÃO, DOE E SE ENVOLVA */
-.missao-doe-envolva {
-    padding: 40px 60px;
-}
-
-.bloco {
+.accordion-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    justify-content: center;
     align-items: center;
+    padding: 40px 0 0 0;
 }
 
-.bloco-img img {
-    height: 150px;
-    width: 150px;
+.details-container {
+    display: flex;
+    gap: 20px;
 }
 
-.bloco-texto h2 {
-    color: #222222;
+details {
+    background-color: #ededed;
+    border-radius: 7px;
+    position: relative;
+    padding: 15px 40px;
+    Width: 300px;
+}
+
+details::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 7px;
+    padding: 4px;
+    background: linear-gradient(90deg, #FF4242, #DD9F2D, #5A8613);
+    clip-path: inset(95% 0 0 0);
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 8px;
-    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
 }
 
-.bloco-texto p {
+details p {
     font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+    padding: 20px 0;
+    font-size: 12px;
+    text-align: center;
 }
 
-/* FIM DA MISSÃO, DOE E SE ENVOLVA */
+/* FIM DO SOBRE OS PROJETOS */
 
-/* FOOTER */
+/* INÍCIO SOBRE NÓS */
+.sobre-nos {
+    padding: 10px 60px;
+}
+
+.container-direito {
+    display: flex;
+    padding: 40px 60px;
+    gap: 30px;
+    text-align: right;
+}
+
+.container-textos {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+}
+
+.container-textos h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600px;
+    font-size: 30px;
+    color: #DD9F2D;
+}
+
+.container-textos h5 {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    color: #DD9F2D;
+}
+
+.container-textos p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.container-img img {
+    width: 400px;
+    height: 400px;
+    flex: 1;
+    background-color: #DD9F2D;
+}
+
+/* FIM DO SOBRE NÓS */
+
+/* INÍCIO DA MISSÃO */
+.container-esquerdo {
+    display: flex;
+    padding: 40px 60px;
+    gap: 30px;
+}
+
+/* FIM DA MISSÃO */
+
+/* INÍCIO DO FOOTER */
 footer {
     background-color: #222222;
-    display: flex;
-    gap: 20px;
     padding: 40px 60px;
     font-family: "Montserrat", sans-serif;
     justify-content: space-between;
+    display: flex;
 }
 
 .footer-logo {
+    padding: 0 60px 0 0;
+    max-width: 350px;
+}
+
+.footer-logo,
+.footer-logo a {
     color: white;
     font-size: 11px;
     color: #8f8f8f;
     max-width: 350px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .footer-logo img {
     height: 50px;
 }
 
-.footer-logo span {
-    color: #DD9F2D;
-}
-
 .footer-nav {
     display: flex;
-    gap: 40px;
-    color: #fff;
-    text-align: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-nav-bloco {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
 }
 
 .footer-nav h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.footer-nav p,
-.footer-nav a,
-#icon-whatsapp {
-    color: #b6b5b5;
-    font-size: 12px;
-}
-
-.footer-nav i {
-    font-size: 25px;
-    color: #b6b5b5;
-    transition: 0.3s;
-}
-
-.footer-nav i:hover {
     color: #DD9F2D;
-    transform: scale(1.1);
+    font-size: 14px;
+    font-weight: 600;
 }
 
+.footer-nav a {
+    color: #B4B2B2;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-logo a:hover {
+    transform: scale(1.1);
+    color: #dadada;
+}
 /* FIM DO FOOTER */
+
+
+/* INÍCIO DA RESPONSIVIDADE */
+/* NOTEBOOK */
+@media (max-width: 1024px) {
+    .introducao .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container,
+    .container-curso {
+        padding: 0 70px;
+    }
+
+    .intro-textos h1,
+    .intro-textos h3,
+    .intro-textos p,
+    .intro-textos #intro-btn {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .intro-img {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro-img img {
+        max-width: 400px;
+        position: relative;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .header-nav a {
+        font-size: 16px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .introducao .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container,
+    .container-curso {
+        padding: 0 70px;
+    }
+
+    .intro-textos h1 {
+        font-size: 30px;
+    }
+
+    .intro-textos p {
+        font-size: 14px;
+    }
+
+    .intro-textos #intro-btn {
+        padding: 5px auto;
+        font-size: 16px;
+    }
+
+    .intro-img {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro-img img {
+        max-width: 300px;
+        position: relative;
+        max-height: 300px;
+    }
+
+    .descricao-libertar h1 {
+        font-size: 30px;
+    }
+
+    .descricao-libertar p {
+        font-size: 14px;
+    }
+
+    .carrossel-area {
+        padding: 0 0 0 80px;
+    }
+
+    .cursos-texto h1 {
+        font-size: 25px;
+    }
+
+    .cursos-texto p {
+        font-size: 14px;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-nav i {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .footer-nav p,
+    .footer-nav a {
+        font-size: 12px;
+    }
+
+    .footer-nav h3 {
+        font-size: 13px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+    .header-nav a {
+        font-size: 13px;
+    }
+
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        background: #222222;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .intro-img img {
+        max-height: 300px;
+    }
+
+    .descricao-libertar h1 {
+        font-size: 25px;
+    }
+
+    .descricao-libertar p {
+        font-size: 12px;
+    }
+
+    .cursos-texto {
+        width: 40%;
+    }
+
+    .cursos-texto h1 {
+        font-size: 18px;
+    }
+
+    .cursos-texto p {
+        font-size: 12px;
+    }
+
+    .carrossel-area {
+        width: 60%;
+        padding: 0 0 0 20px;
+    }
+
+    .carrossel-card {
+        max-width: 100px;
+        height: 200px;
+        flex-direction: column;
+    }
+
+    .carrossel-card h3 {
+        font-size: 15px;
+    }
+
+    .carrossel-card p {
+        font-size: 12px;
+    }
+
+    .publico-atendido h1 {
+        font-size: 30px;
+    }
+
+    .card-publico p {
+        font-size: 11px;
+    }
+
+    .bloco p {
+        font-size: 11px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* FIM DA RESPONSIVIDADE */

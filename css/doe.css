@@ -40,7 +40,7 @@ header {
 }
 
 #active {
-    color: #FFB52B;
+    color: #6da118;
 }
 
 /* FIM DO HEADER */
@@ -160,65 +160,143 @@ main {
 
 /* INÍCIO VÍDEO LIBERTAR */
 .video-libertar{
-    background-color: #222222;
-    padding: 40px 60px;
+    padding: 40px 70px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
 }
+
+.video-libertar iframe{
+    height: 400px;
+    width: 700px;
+}
+
 /* FIM VÍDEO LIBERTAR */
 
-/* FOOTER */
-footer{
+/* INÍCIO DO FOOTER */
+footer {
     background-color: #222222;
-    display: flex;
-    gap: 20px;
     padding: 40px 60px;
     font-family: "Montserrat", sans-serif;
     justify-content: space-between;
-    -webkit-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.42); 
-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.42);
+    display: flex;
 }
 
-.footer-logo{
+.footer-logo {
+    padding: 0 60px 0 0;
+    max-width: 350px;
+}
+
+.footer-logo,
+.footer-logo a {
     color: white;
     font-size: 11px;
     color: #8f8f8f;
     max-width: 350px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
-.footer-logo img{
+.footer-logo img {
     height: 50px;
 }
 
-.footer-logo span{
-    color: #DD9F2D;
-}
-
-.footer-nav{
+.footer-nav {
     display: flex;
-    gap: 40px;
-    color: #fff;
-    text-align: center;
+    gap: 30px;
+    text-align: left;
 }
 
-.footer-nav h3{
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.footer-nav-bloco {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
 }
 
-.footer-nav p, .footer-nav a, #icon-whatsapp{
-    color: #b6b5b5;
-    font-size: 12px;
-}
-
-.footer-nav i{
-    font-size: 25px;
-    color: #b6b5b5;
-    transition: 0.3s;
-}
-
-.footer-nav i:hover{
+.footer-nav h3 {
     color: #DD9F2D;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-nav a {
+    color: #B4B2B2;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-logo a:hover {
     transform: scale(1.1);
+    color: #dadada;
 }
 /* FIM DO FOOTER */
+
+/* RESPONSIVIDADE */
+/* NOTEBOOK */
+@media (max-width:1024px) {
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* TABLET */
+@media (max-width:764px) {
+    .header-nav a {
+        font-size: 16px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .quadrado-verde, .quadrado-vermelho{
+        width: 0;
+        height: 0;
+    }
+    
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* CELULAR */
+@media (max-width:480px) {
+    .header-nav a {
+        font-size: 13px;
+    }
+
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        background: #222222;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .video-libertar iframe{
+        max-width: 300px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}

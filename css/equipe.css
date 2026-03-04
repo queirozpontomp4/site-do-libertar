@@ -40,7 +40,7 @@ header {
 }
 
 #active {
-    color: #FFB52B;
+    color: #FF4242;
 }
 
 /* FIM DO HEADER */
@@ -57,7 +57,7 @@ main {
 
 .banner {
     width: 100%;
-    height: 300px; 
+    height: 300px;
     overflow: hidden;
 }
 
@@ -67,6 +67,7 @@ main {
     object-fit: cover;
     display: block;
 }
+
 /* FIM DO MAIN E BANNER*/
 
 /* CARROSSEL DA COODERNAÇÃO */
@@ -100,10 +101,26 @@ main {
     transition: transform 0.5s ease;
 }
 
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+.card-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #222222;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .carrossel-card {
     background-color: #222222;
-    min-width: 300px;
-    padding: 80px 20px 20px;
+    flex: 0 0 320px;
+    padding: 150px 20px 20px;
     text-align: center;
     color: white;
     border-radius: 10px;
@@ -187,12 +204,11 @@ main {
     padding: 40px 60px;
 }
 
-.professores-texto {
+.professores-texto h1{
     font-family: "Dela Gothic One", sans-serif;
     color: #222222;
     text-align: center;
     font-weight: 400;
-    padding: 0 0 40px;
 }
 
 .professores-texto span {
@@ -220,60 +236,175 @@ main {
 
 /* FIM DO CARROSSEL DOS DESENVOLVEDORES */
 
-/* FOOTER */
+/* INÍCIO DO FOOTER */
 footer {
     background-color: #222222;
-    display: flex;
-    gap: 20px;
     padding: 40px 60px;
     font-family: "Montserrat", sans-serif;
     justify-content: space-between;
+    display: flex;
 }
 
 .footer-logo {
+    padding: 0 60px 0 0;
+    max-width: 350px;
+}
+
+.footer-logo,
+.footer-logo a {
     color: white;
     font-size: 11px;
     color: #8f8f8f;
     max-width: 350px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .footer-logo img {
     height: 50px;
 }
 
-.footer-logo span {
-    color: #DD9F2D;
-}
-
 .footer-nav {
     display: flex;
-    gap: 40px;
-    color: #fff;
-    text-align: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-nav-bloco {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
 }
 
 .footer-nav h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.footer-nav p,
-.footer-nav a,
-#icon-whatsapp {
-    color: #b6b5b5;
-    font-size: 12px;
-}
-
-.footer-nav i {
-    font-size: 25px;
-    color: #b6b5b5;
-    transition: 0.3s;
-}
-
-.footer-nav i:hover {
     color: #DD9F2D;
-    transform: scale(1.1);
+    font-size: 14px;
+    font-weight: 600;
 }
 
+.footer-nav a {
+    color: #B4B2B2;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-logo a:hover {
+    transform: scale(1.1);
+    color: #dadada;
+}
 /* FIM DO FOOTER */
+
+/* RESPONSIVIDADE */
+@media (max-width:1024px) {
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* TABLET */
+@media (max-width:764px) {
+    .header-nav a {
+        font-size: 16px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .container {
+        padding: 0 70px;
+    }
+
+    main h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* CELULAR */
+@media (max-width:480px) {
+    .header-nav a {
+        font-size: 13px;
+    }
+
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        background: #222222;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .carrossel-viewport {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .carrossel-card h3 {
+        font-size: 14px;
+    }
+
+    .carrossel-card h6 {
+        font-size: 12px;
+    }
+
+    .carrossel-card p {
+        font-size: 11px;
+    }
+
+    .carrossel-card i {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .carrossel-card {
+        width: 200px;
+    }
+    
+    .btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #222222;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .prev {
+        left: -50px;
+    }
+
+    .next {
+        right: -50px;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}

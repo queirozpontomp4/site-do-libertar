@@ -40,7 +40,7 @@ header {
 }
 
 #active {
-    color: #FF4242;
+    color: #fdbd46;
 }
 
 /* FIM DO HEADER */
@@ -55,260 +55,320 @@ main {
     margin: 0 auto;
 }
 
+.banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* FIM DO MAIN */
 
-/* PROJETO PRÉ-VESTIBULAR */
-.pre-vestibular-container {
+/* INÍCIO DO CONTAINER ESQUERDO */
+.pre-vestibular, .esportes, .cidadania{
+    padding: 40px 60px;
+}
+
+.container-esquerdo{
     display: flex;
-    padding: 40px 0;
-    position: relative;
+    gap: 30px;
 }
 
-.pre-vestibular-textos {
-    padding: 0 60px;
+.container-img img{
+    flex: 1;
+    height: 400px;
+    width: 400px;
 }
 
-.pre-vestibular-textos h1 {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    color: #D82828;
-    margin-bottom: 20px;
-}
-
-.pre-vestibular-textos p {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #222222;
-}
-
-.pre-vestibular-img img {
-    max-width: 400px;
-    height: auto;
-    position: static;
-    border-radius: 20px;
-    object-fit: contain;
-    margin: 0 40px 0 0;
-    border: 5px solid #D82828;
-}
-
-.quadrado-vermelho {
-    background-color: #D82828;
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    z-index: -1;
-    border-radius: 20px 0 0 20px;
-    margin: 50px 0;
-}
-/* FIM DO PROJETO PRÉ-VESTIBULAR */
-
-/* PROJETO E CIDADANIA */
-.cidadania-container {
-    display: flex;
-    padding: 40px 0;
-    position: relative;
-}
-
-.cidadania-textos {
-    padding: 0 60px;
-}
-
-.cidadania-textos h1 {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    color: #DD9F2D;
-    margin-bottom: 20px;
-}
-
-.cidadania-textos p {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #222222;
-}
-
-.cidadania-img img {
-    max-width: 400px;
-    height: auto;
-    position: static;
-    border-radius: 20px;
-    object-fit: contain;
-    margin: 0 0 0 40px;
-    border: 5px solid #DD9F2D;
-}
-
-.quadrado-amarelo {
-    background-color: #DD9F2D;
+.container-textos{
+    flex: 1;
     width: 300px;
-    height: 300px;
-    position: absolute;
-    z-index: -1;
-    border-radius: 0 20px 20px 0;
-    margin: 50px 0;
-}
-/* FIM DO PROJETO CIDADANIA */
-
-/* PROJETO ESPORTESR */
-.esportes-container {
     display: flex;
-    padding: 40px 0;
-    position: relative;
+    flex-direction: column;
 }
 
-.esportes-textos {
-    padding: 0 60px;
+.container-textos h1{
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
 }
 
-.esportes-textos h1 {
-    font-family: "Dela Gothic One", sans-serif;
-    font-weight: 400;
-    color: #5A8613;
-    margin-bottom: 20px;
-}
-
-.esportes-textos p {
+.container-textos p{
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    color: #222222;
+    padding: 20px 0 0 0;
 }
+/* FIM DO CONTAINER ESQUERDO */
 
-.esportes-img img {
-    max-width: 400px;
-    height: auto;
-    position: static;
-    border-radius: 20px;
-    object-fit: contain;
-    margin: 0 40px 0 0;
-    border: 5px solid #5A8613;
+/* INÍCIO DO CONTIANER DIREITO */
+.container-direito{
+    display: flex;
+    gap: 30px;
+    text-align: right;
 }
+/* FIM DO CONTIANER DIREITO */
 
-.quadrado-verde {
-    background-color: #5A8613;
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    z-index: -1;
-    border-radius: 20px 0 0 20px;
-    margin: 50px 0;
-}
-
-/* FIM DO PROJETO ESPORTES */
-
-/* CURSOS COM CERTIFICADO */
-.cursos {
+/* INÍCIO OUTROS CURSOS */
+.outros-cursos{
     background-color: #222222;
     padding: 40px 60px;
 }
 
-.cursos h1 {
+.outros-cursos h1{
+    color: #ffffff;
     font-family: "Dela Gothic One", sans-serif;
-    color: #ededed;
-    font-weight: 400;
     text-align: center;
-    margin-bottom: 20px;
+    font-weight: 400;
 }
 
-.cursos-cards-container {
+.card-container{
+    padding: 20px 0;
     display: flex;
     gap: 20px;
 }
 
-.card {
-    min-height: 200px;
-    width: 300px;
+.card{
     background-color: #ededed;
-    padding: 20px;
-    text-align: center;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 3px 19px -6px rgba(255, 255, 255, 0.24);
-    box-shadow: 0px 3px 19px -6px rgba(255, 255, 255, 0.24);
-    transition: 0.3s;
+    min-height: 300px;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
     position: relative;
 }
 
-.card::before{
+.card::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 10px;
+    border-radius: 7px;
     padding: 3px;
     background: linear-gradient(90deg, #FF4242, #DD9F2D, #5A8613);
-    clip-path: inset(97% 0 0 0);
-}
-
-.card:hover {
-    -webkit-box-shadow: 0px 0px 19px -4px rgba(255, 255, 255, 0.83);
-    box-shadow: 0px 0px 19px -4px rgba(255, 255, 255, 0.83);
+    clip-path: inset(96% 0 0 0);
 }
 
 .card h3{
+    font-size: 18px;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .card p{
+    font-size: 14px;
     font-family: "Poppins", sans-serif;
-    font-size: 12px;
+}
+/* FIM OUTROS CURSOS */
+
+/*  INÍCIO FAÇA SUA INSCRIÇÃO */
+.inscricao{
+    padding: 40px 60px;
+    text-align: center;
 }
 
-/* FIM DO CURSOS COM CERTIFICADO */
+.inscricao h1{
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: #222222;
+    padding: 10px 0;
+}
 
-/* FOOTER */
-footer{
-    background-color: #222222;
+.inscricao h5{
+    font-family: "Montserrat", sans-serif;
+    color: #222222;
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+
+.card-inscricao-container{
     display: flex;
     gap: 20px;
+    padding: 40px 0;
+}
+
+.card-inscricao{
+    background-color: #aaaaaa;
+    min-height: 350px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #757575;
+    transition: 0.3s ease;
+}
+
+.card-inscricao h6{
+    font-size: 14px;
+    padding: 0 0 20px 0;
+    font-style: italic;
+}
+
+.card-inscricao h2{
+    font-size: 30px;
+}
+
+.card-inscricao p{
+    font-size: 14px;
+    padding: 0 0 20px 0;
+}
+
+.card-inscricao button{
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #646464;
+    font-size: 16px;
+    font-weight:600;
+    cursor: not-allowed;
+    background-color: #8f8f8f;
+    border: none;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card-inscricao:hover{
+    animation: tremer 0.3s linear 2;
+}
+
+@keyframes tremer {
+    0%   { transform: translate(0, 0); }
+    20%  { transform: translate(-4px, 2px); }
+    40%  { transform: translate(4px, -2px); }
+    60%  { transform: translate(-4px, 2px); }
+    80%  { transform: translate(4px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/*  FIM FAÇA SUA INSCRIÇÃO */
+
+/* INÍCIO DO FOOTER */
+footer {
+    background-color: #222222;
     padding: 40px 60px;
     font-family: "Montserrat", sans-serif;
     justify-content: space-between;
-    -webkit-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.82); 
-box-shadow: 0px -2px 19px 2px rgba(0,0,0,0.82);
+    display: flex;
 }
 
-.footer-logo{
+.footer-logo {
+    padding: 0 60px 0 0;
+    max-width: 350px;
+}
+
+.footer-logo,
+.footer-logo a {
     color: white;
     font-size: 11px;
     color: #8f8f8f;
     max-width: 350px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
-.footer-logo img{
+.footer-logo img {
     height: 50px;
 }
 
-.footer-logo span{
-    color: #DD9F2D;
-}
-
-.footer-nav{
+.footer-nav {
     display: flex;
-    gap: 40px;
-    color: #fff;
-    text-align: center;
+    gap: 30px;
+    text-align: left;
 }
 
-.footer-nav h3{
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.footer-nav-bloco {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 10px;
 }
 
-.footer-nav p, .footer-nav a, #icon-whatsapp{
-    color: #b6b5b5;
-    font-size: 12px;
-}
-
-.footer-nav i{
-    font-size: 25px;
-    color: #b6b5b5;
-    transition: 0.3s;
-}
-
-.footer-nav i:hover{
+.footer-nav h3 {
     color: #DD9F2D;
-    transform: scale(1.1);
+    font-size: 14px;
+    font-weight: 600;
 }
+
+.footer-nav a {
+    color: #B4B2B2;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-logo a:hover {
+    transform: scale(1.1);
+    color: #dadada;
+}
+
 /* FIM DO FOOTER */
+
+/* INÍCIO DA RESPONSIVIDADE */
+/* NOTEBOOK */
+@media (max-width: 1024px) {
+    .header-nav a {
+        font-size: 16px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .introducao .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-direito p, .container-esquerdo p{
+        font-size: 12px;
+    }
+
+    .card-container, .card-inscricao-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 764px) {
+    .header-nav a {
+        font-size: 16px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .banner{
+        overflow: hidden;
+    }
+    .container-direito, .container-esquerdo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-direito p, .container-esquerdo p{
+        font-size: 12px;
+    }
+
+    .card-container, .card-inscricao-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
